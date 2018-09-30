@@ -19,11 +19,18 @@ const Sisalto = ({ osat }) => {
     )
 }
 
+const Yhteensa = ({ osat }) => {
+  return (
+      <p>yhteensä {osat.reduce((sum,osa) => sum+osa.tehtavia,0)} tehtävää</p>
+    )
+}
+
 const Kurssi = ({ kurssi }) => {
 	return (
 	 <div>
 	 	<Otsikko name={kurssi.nimi} />
 	 	<Sisalto osat={kurssi.osat} />
+	 	<Yhteensa osat={kurssi.osat} />
 	 </div>
 	)
 }
