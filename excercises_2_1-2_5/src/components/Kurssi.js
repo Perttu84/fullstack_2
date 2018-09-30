@@ -14,9 +14,7 @@ const Osa = ({ part, exercises }) => {
 const Sisalto = ({ osat }) => {
   return (
   	<div>
-      <Osa part={osat[0].nimi} exercises={osat[0].tehtavia}/>
-      <Osa part={osat[1].nimi} exercises={osat[1].tehtavia}/>
-      <Osa part={osat[2].nimi} exercises={osat[2].tehtavia}/>
+  	 {osat.map((osa,i)=><Osa key={i} part={osa.nimi} exercises={osa.tehtavia}/>)}
     </div>
     )
 }
