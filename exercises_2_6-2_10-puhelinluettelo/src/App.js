@@ -1,6 +1,7 @@
 import React from 'react';
 import Person from './components/Person'
 import AddPersonForm from './components/AddPersonForm'
+import './index.css'
 
 class App extends React.Component {
   constructor(props) {
@@ -29,7 +30,6 @@ class App extends React.Component {
       alert('Nimi on jo luettelossa!')
     }
   }
-
 
   render() {
     return (
