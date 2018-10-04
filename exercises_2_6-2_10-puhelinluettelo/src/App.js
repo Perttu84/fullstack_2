@@ -9,8 +9,6 @@ class App extends React.Component {
     super(props)
     this.state = {
       persons: [],
-      newName: '',
-      newNumber: '',
       filter: ''
   }
 }
@@ -42,7 +40,11 @@ class App extends React.Component {
         <h2>Puhelinluettelo</h2>
         <AddPersonForm addPerson={this.addPerson}/>
         <h2>Numerot</h2>
-        {this.state.persons.map(person => <Person key={person.name} person={person} />)}
+        <table>
+          <tbody>
+            {this.state.persons.map(person => <Person key={person.name} person={person} />)}
+          </tbody>
+        </table>
       </div>
     )
   }
